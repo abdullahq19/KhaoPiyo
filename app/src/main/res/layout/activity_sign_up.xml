@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/my_theme"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text="Arslicious"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy"
+        app:civ_border_color="#12E889"
+        app:civ_border_width="1dp"
+        app:layout_constraintLeft_toLeftOf="@id/tvName"
+        app:layout_constraintRight_toRightOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        style="@style/et_theme"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/person_icon"
+        android:drawablePadding="10dp"
+        android:hint="Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/off_white"
+        android:textSize="25sp"
+        app:layout_constraintHeight_percent="0.077"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileImage"
+        app:layout_constraintRight_toRightOf="@id/ivProfileImage"
+        app:layout_constraintTop_toBottomOf="@id/ivProfileImage"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/et_theme"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/email_icon"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/off_white"
+        android:textSize="25sp"
+        app:layout_constraintHeight_percent="0.077"
+        app:layout_constraintLeft_toLeftOf="@id/etUserName"
+        app:layout_constraintRight_toRightOf="@id/etUserName"
+        app:layout_constraintTop_toBottomOf="@id/etUserName"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/et_theme"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/off_white"
+        android:textSize="25sp"
+        app:layout_constraintHeight_percent="0.077"
+        app:layout_constraintLeft_toLeftOf="@+id/etEmail"
+        app:layout_constraintRight_toRightOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rv_cart_shape"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintLeft_toLeftOf="@+id/etPassword"
+        app:layout_constraintRight_toRightOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

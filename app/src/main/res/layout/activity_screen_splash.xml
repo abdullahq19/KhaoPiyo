@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape"
+    tools:context=".ScreenSplash">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/naruto"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:text="Arslicious"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintLeft_toLeftOf="@+id/ivImage"
+        app:layout_constraintRight_toRightOf="@+id/ivImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="cursive"
+        android:text="@string/cooking_is_love_made_visible"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintRight_toRightOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintWidth_percent="0.8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

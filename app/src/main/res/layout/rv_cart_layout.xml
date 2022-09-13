@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rv_shape"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <ImageView
+            android:id="@+id/ivCartImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rv_shape"
+            android:src="@drawable/naruto"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.32" />
+
+        <TextView
+            android:id="@+id/tvCartName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="25dp"
+            android:text="Strawberry Shake"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintLeft_toRightOf="@id/ivCartImage"
+            app:layout_constraintRight_toLeftOf="@id/btnCartDelete"
+            app:layout_constraintTop_toTopOf="@id/btnCartDelete"
+            app:layout_constraintWidth_percent="0.44" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCartDelete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/delete_icon"
+            app:layout_constraintHeight_percent="0.26"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.09" />
+
+        <TextView
+            android:id="@+id/tvCQ"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="20dp"
+            android:text="Quantity:"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.22"
+            app:layout_constraintLeft_toRightOf="@id/ivCartImage"
+            app:layout_constraintWidth_percent="0.23" />
+
+        <TextView
+            android:id="@+id/tvCartQuantity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1"
+            android:layout_marginTop="3dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvCQ"
+            app:layout_constraintHeight_percent="0.22"
+            app:layout_constraintLeft_toRightOf="@id/tvCQ"
+            app:layout_constraintTop_toTopOf="@id/tvCQ"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <TextView
+            android:id="@+id/tvCartPrice"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1200343"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvCartQuantity"
+            app:layout_constraintHeight_percent="0.22"
+            app:layout_constraintLeft_toRightOf="@id/tvCartQuantity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCartQuantity"
+            app:layout_constraintWidth_percent="0.26" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

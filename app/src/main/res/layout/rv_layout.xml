@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="185dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/rv_shape">
+
+    <ImageView
+        android:id="@+id/ivDImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/pattyburger"
+        app:layout_constraintBottom_toTopOf="@id/tvDName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/tvDName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nawabi Pizza"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/ivDImage"
+        app:layout_constraintRight_toRightOf="@id/ivDImage"
+        app:layout_constraintTop_toBottomOf="@id/ivDImage" />
+
+    <TextView
+        android:id="@+id/tvDCurrencyType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:text="PKR:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDName"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <TextView
+        android:id="@+id/tvDPrice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="3003.342"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDCurrencyType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toRightOf="@id/tvDCurrencyType"
+        app:layout_constraintTop_toTopOf="@+id/tvDCurrencyType"
+        app:layout_constraintWidth_percent="0.36" />
+</androidx.constraintlayout.widget.ConstraintLayout>

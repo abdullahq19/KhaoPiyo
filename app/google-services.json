@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "337238237889",
+    "project_id": "arslicious-48d79",
+    "storage_bucket": "arslicious-48d79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337238237889:android:bdedd7eb104ac48b3bea40",
+        "android_client_info": {
+          "package_name": "com.example.arslicious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337238237889-p2mqgiej3b3d4s2m6gg24hkkg38ng9aa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrcrct01wo9l2Z-brTezP9zygl3Gua8qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337238237889-p2mqgiej3b3d4s2m6gg24hkkg38ng9aa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
