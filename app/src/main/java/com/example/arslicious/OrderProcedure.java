@@ -81,7 +81,7 @@ public class OrderProcedure extends AppCompatActivity {
             public void onClick(View view) {
                 orderNow();
                 finish();
-                startActivity(new Intent(OrderProcedure.this, MainActivity.class));
+                startActivity(new Intent(OrderProcedure.this, OrderPlacedScreen.class));
             }
         });
     }

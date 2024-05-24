@@ -1,9 +1,13 @@
 package com.example.arslicious;
 
+import static android.os.Build.VERSION_CODES.R;
+
 import android.annotation.SuppressLint;
+import android.content.ContentProvider;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -14,12 +18,15 @@ import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
@@ -39,6 +46,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView ivNaruto;
     TextView tvName;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         btnCart = findViewById(R.id.btnCart);
 
+
+
 //       for Status bar colour
         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.teal_700));
 
@@ -69,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         ivNaruto = view.findViewById(R.id.ivNaruto);
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference ref = storage.getReference();
-        ref.child(Objects.requireNonNull(firebaseAuth.getCurrentUser().getEmail())).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        ref.child(Objects.requireNonNull(Objects.requireNonNull(firebaseAuth.getCurrentUser()).getEmail())).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(ivNaruto);
@@ -82,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseFirestore.collection("UserName").document(firebaseAuth.getCurrentUser().getUid()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                String Name = value.get("Name").toString();
+                assert value != null;
+                String Name = Objects.requireNonNull(value.get("Name")).toString();
                 tvName.setText(Name);
             }
         });
@@ -98,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Fries"));
         tabLayout.addTab(tabLayout.newTab().setText("Shakes"));
         tabLayout.addTab(tabLayout.newTab().setText("Pasta"));
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -149,6 +164,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.order:
                         startActivity(new Intent(MainActivity.this, OrderHistory.class));
                         Toast.makeText(MainActivity.this, "My Orders", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.aboutUs:
+                        startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                        Toast.makeText(MainActivity.this, "About us", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.signOut:
                         firebaseAuth.signOut();

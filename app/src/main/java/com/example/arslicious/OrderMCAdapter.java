@@ -5,8 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -20,15 +18,15 @@ public class OrderMCAdapter extends RecyclerView.Adapter<OrderMCAdapter.OrderVie
         this.orderModelClasses = orderModelClasses;
     }
 
-    @NonNull
+
     @Override
-    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OrderViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_order_layout, null);
         return new OrderViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
+    public void onBindViewHolder(OrderViewHolder holder, int position) {
         Picasso.get().load(orderModelClasses.get(position).getOrderImage()).into(holder.ivOrderImage);
         holder.tvOrderName.setText(orderModelClasses.get(position).getOrderName());
         holder.tvOrderQuantity.setText(orderModelClasses.get(position).getOrderQuantity());
@@ -43,11 +41,11 @@ public class OrderMCAdapter extends RecyclerView.Adapter<OrderMCAdapter.OrderVie
         return orderModelClasses.size();
     }
 
-    public class OrderViewHolder extends RecyclerView.ViewHolder {
+    public static class OrderViewHolder extends RecyclerView.ViewHolder {
         TextView tvOrderName, tvOrderPrice, tvOrderQuantity, tvOrderAddons, tvOrderPhoneNo, tvOrderAddress;
         ImageView ivOrderImage;
 
-        public OrderViewHolder(@NonNull View itemView) {
+        public OrderViewHolder(View itemView) {
             super(itemView);
             tvOrderName = itemView.findViewById(R.id.tvOrderName);
             tvOrderPrice = itemView.findViewById(R.id.tvOrderPrice);

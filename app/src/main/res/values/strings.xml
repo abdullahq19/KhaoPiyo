@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Arslicious</string>
+    <string name="app_name">Khao Piyo</string>
     <string name="user_name">Username</string>
     <string name="password">Password</string>
     <string name="or">Or</string>
@@ -10,8 +10,10 @@
     <string name="add">Add</string>
     <string name="log_out">Log Out</string>
     <string name="sign_in">Sign In</string>
-    <string name="arslicious">Arslicious</string>
-    <string name="cooking_is_love_made_visible">Cooking is Love made Visible</string>
+    <string name="arslicious">Khao Piyo</string>
+    <string name="cooking_is_love_made_visible">Delivering goodness at your doorstep</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fb">\@abdullahqureshi163,"   "@afaqtufail000</string>
+    <string name="about">Khao Piyo is developed by Abdullah Qureshi and Afaq Tufail. We are developers who are full of ambition, having thirst of quality knowledge related to programming and technology in general. We are aiming to provide our clients with user-friendly applications which are easy to use and provide list of services to people so they can enjoy hassle free entertainment, knowledge, and faclities at the palm of their hands.\n\nWe hope that the users of this Food Delivery Application use and enjoy our app. </string>
 </resources>

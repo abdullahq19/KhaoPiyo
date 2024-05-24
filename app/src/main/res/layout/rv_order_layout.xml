@@ -7,9 +7,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="330dp"
-        android:layout_height="210dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rv_shape"
         app:layout_constraintHeight_percent="0.4"
         app:layout_constraintHorizontal_bias="0.493"
@@ -22,8 +22,6 @@
             android:id="@+id/ivOrderImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:background="@drawable/rv_shape"
             android:src="@drawable/naruto"
             app:layout_constraintHeight_percent="0.4"
@@ -33,11 +31,11 @@
 
         <TextView
             android:id="@+id/tvOrName"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Name: "
+            android:fontFamily="@font/montserrat_bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -48,8 +46,8 @@
 
         <TextView
             android:id="@+id/tvOrderName"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Strawberry Shake"
             android:textAlignment="textStart"
             android:textColor="@color/white"
@@ -62,12 +60,15 @@
 
         <TextView
             android:id="@+id/tvOrPrice"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Price:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: "
+            android:textStyle="bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="10dp"
             app:layout_constraintHeight_percent="0.13"
             app:layout_constraintLeft_toLeftOf="@id/tvOrName"
             app:layout_constraintTop_toBottomOf="@id/tvOrName"
@@ -75,8 +76,8 @@
 
         <TextView
             android:id="@+id/tvOrderPrice"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="1200343"
             android:textAlignment="textStart"
             android:textColor="@color/white"
@@ -89,12 +90,14 @@
 
         <TextView
             android:id="@+id/tvOrQuantity"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Quantity:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity: "
+            android:fontFamily="@font/montserrat_bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:layout_marginTop="10dp"
             app:layout_constraintHeight_percent="0.13"
             app:layout_constraintLeft_toLeftOf="@id/tvOrPrice"
             app:layout_constraintTop_toBottomOf="@id/tvOrPrice"
@@ -102,8 +105,8 @@
 
         <TextView
             android:id="@+id/tvOrderQuantity"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="100"
             android:textAlignment="textStart"
             android:textColor="@color/white"
@@ -116,21 +119,22 @@
 
         <TextView
             android:id="@+id/tvOrAddons"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Addons:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Addons: "
+            android:layout_marginTop="10dp"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintHeight_percent="0.13"
+            android:fontFamily="@font/montserrat_bold"            app:layout_constraintHeight_percent="0.13"
             app:layout_constraintLeft_toLeftOf="@id/tvOrQuantity"
             app:layout_constraintTop_toBottomOf="@id/tvOrQuantity"
             app:layout_constraintWidth_percent="0.21" />
 
         <TextView
             android:id="@+id/tvOrderAddons"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Spicy and Extra Cheese"
             android:textAlignment="textStart"
             android:textColor="@color/white"
@@ -143,12 +147,14 @@
 
         <TextView
             android:id="@+id/tvOrPhone"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Phone#:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone#: "
+            android:fontFamily="@font/montserrat_bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:layout_marginTop="10dp"
             app:layout_constraintHeight_percent="0.13"
             app:layout_constraintLeft_toLeftOf="@id/tvOrAddons"
             app:layout_constraintTop_toBottomOf="@id/tvOrAddons"
@@ -156,8 +162,8 @@
 
         <TextView
             android:id="@+id/tvOrderPhoneNo"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="03153891302"
             android:textAlignment="textStart"
             android:textColor="@color/white"
@@ -170,12 +176,14 @@
 
         <TextView
             android:id="@+id/tvOrAddress"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Address:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address: "
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="10dp"
             app:layout_constraintHeight_percent="0.13"
             app:layout_constraintLeft_toLeftOf="@id/tvOrPhone"
             app:layout_constraintTop_toBottomOf="@id/tvOrPhone"
@@ -184,16 +192,15 @@
         <TextView
             android:id="@+id/tvOrderAddress"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:text="ahfjkahfjahsfjkhakhajfhasjfhasjfhajkfjashfjhasjkfhasjfhkajh"
+            android:layout_height="wrap_content"
+            android:text="NCBA, Bahawalpur"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@id/tvOrAddress"
             app:layout_constraintHeight_percent="0.26"
             app:layout_constraintLeft_toRightOf="@id/tvOrAddress"
-            app:layout_constraintTop_toTopOf="@id/tvOrAddress"
+            app:layout_constraintTop_toTopOf="@+id/tvOrAddress"
             app:layout_constraintWidth_percent="0.7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

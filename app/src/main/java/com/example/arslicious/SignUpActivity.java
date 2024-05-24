@@ -105,6 +105,7 @@ public class SignUpActivity extends AppCompatActivity {
                 builder.setCancelable(true);
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
+                alertDialog.getWindow().setBackgroundDrawableResource(R.color.ass);
 
                 AppCompatButton btnCamera = view1.findViewById(R.id.btnCamera);
                 AppCompatButton btnGallery = view1.findViewById(R.id.btnGallery);
@@ -232,6 +233,8 @@ public class SignUpActivity extends AppCompatActivity {
 //                        }
 //                    });
                     progressBar.setVisibility(View.GONE);
+                    Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                    startActivity(intent);
 //                    startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
 //                   ADDING NAME TO FIRESTORE
                     Map<String, Object> map = new HashMap<>();

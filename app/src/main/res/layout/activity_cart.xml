@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@drawable/shape"
     tools:context=".CartActivity">
 
@@ -16,7 +17,8 @@
         android:textAlignment="center"
         android:textColor="@color/off_white"
         android:textSize="30sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintHeight_percent="0.06"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -33,6 +35,7 @@
         android:textAlignment="center"
         android:textColor="@color/off_white"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintBottom_toTopOf="@id/rv_Cart"
         app:layout_constraintHeight_percent="0.04"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -41,6 +44,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Cart"
+        android:foregroundGravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="88dp"
@@ -66,6 +70,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line" />
 
@@ -95,10 +100,11 @@
         android:layout_height="50dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/rv_cart_shape"
-        android:text="Proceed To Checkout"
+        android:text="Proceed to checkout"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

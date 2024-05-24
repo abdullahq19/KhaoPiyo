@@ -1,5 +1,7 @@
 package com.example.arslicious;
 
+import static android.view.View.inflate;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +9,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -22,6 +28,12 @@ import java.util.List;
 public class ModelClassAdapter extends RecyclerView.Adapter<ModelClassAdapter.productViewHolder> {
     List<ModelClass> modelClassList;
     Context context;
+
+    private static OnCardLongClickListener onCardLongClickListener;
+
+    public void setOnCardLongClickListener(OnCardLongClickListener onCardLongClickListener) {
+        ModelClassAdapter.onCardLongClickListener = onCardLongClickListener;
+    }
 
     public ModelClassAdapter(Context context, List<ModelClass> modelClassList) {
         this.modelClassList = modelClassList;
@@ -51,6 +63,16 @@ public class ModelClassAdapter extends RecyclerView.Adapter<ModelClassAdapter.pr
                 context.startActivity(intent);
             }
         });
+
+//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View view) {
+//                if (onCardLongClickListener != null) {
+//                    onCardLongClickListener.OnCardLongClick(view, position);
+//                }
+//                return true;
+//            }
+//        });
     }
 
     @Override
@@ -68,6 +90,20 @@ public class ModelClassAdapter extends RecyclerView.Adapter<ModelClassAdapter.pr
             tvDCurrencyType = itemView.findViewById(R.id.tvDCurrencyType);
             tvDName = itemView.findViewById(R.id.tvDName);
             tvDPrice = itemView.findViewById(R.id.tvDPrice);
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        onCardLongClickListener.onCardLongClick(view, position);
+                    }
+                    return true;
+                }
+            });
         }
+    }
+    interface OnCardLongClickListener{
+        void onCardLongClick(View view, int position);
     }
 }

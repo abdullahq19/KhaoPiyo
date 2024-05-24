@@ -16,6 +16,10 @@
             android:icon="@drawable/my_order_icon"
             android:title="My Order" />
         <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/baseline_check_circle_24"
+            android:title="About us" />
+        <item
             android:id="@+id/signOut"
             android:icon="@drawable/logout_icon"
             android:title="Sign Out" />

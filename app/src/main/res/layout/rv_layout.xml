@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="160dp"
-    android:layout_height="185dp"
+    android:layout_width="180dp"
+    android:layout_height="200dp"
     android:layout_marginStart="10dp"
     android:layout_marginTop="20dp"
+    android:id="@+id/rvCalories"
     android:background="@drawable/rv_shape">
 
     <ImageView
@@ -27,6 +28,7 @@
         android:layout_marginTop="10dp"
         android:text="Nawabi Pizza"
         android:textAlignment="center"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -34,31 +36,36 @@
         app:layout_constraintRight_toRightOf="@id/ivDImage"
         app:layout_constraintTop_toBottomOf="@id/ivDImage" />
 
+    <LinearLayout
+        android:id="@+id/llPrice"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/price_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/tvDCurrencyType"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="PKR:"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDName"
-        app:layout_constraintWidth_percent="0.25" />
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tvDPrice"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="3003.342"
-        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1500"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/tvDCurrencyType"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintLeft_toRightOf="@id/tvDCurrencyType"
-        app:layout_constraintTop_toTopOf="@+id/tvDCurrencyType"
-        app:layout_constraintWidth_percent="0.36" />
+        android:layout_marginStart="5dp"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
